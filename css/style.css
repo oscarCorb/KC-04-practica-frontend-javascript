@@ -1,3 +1,17 @@
-body {
-    color: lightgreen;
+.advert-info,
+.advert-image {
+    display: inline-block;
+}
+
+input {
+    display: block;
+}
+
+img {
+    width: 150px;
+}
+
+.nav-menu {
+    position: fixed;
+    bottom: 50px;
 }
