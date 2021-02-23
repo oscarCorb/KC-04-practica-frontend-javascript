@@ -5,78 +5,36 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/loader-ring.css" />
         <title>NodePop Frontend</title>
     </head>
     <body>
-        <h1>Nodepop</h1>
+        <div class="lds-dual-ring"></div>
 
-        <hr />
-
-        <div class="advert-list">
-            <div class="advert">
-                <div class="advert-image">
-                    <img src="./assets/img/test.jpg" alt="" />
-                </div>
-                <div class="advert-info">
-                    <h2 class="product-name">Nombre del producto</h2>
-                    <p class="product-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    </p>
-                    <p class="product-price">121,43 €</p>
-                    <p class="product-condition">Venta</p>
-                </div>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="advert-list">
-            <div class="advert">
-                <div class="advert-image">
-                    <img src="./assets/img/test.jpg" alt="" />
-                </div>
-                <div class="advert-info">
-                    <h2 class="product-name">Nombre del producto</h2>
-                    <p class="product-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    </p>
-                    <p class="product-price">121,43 €</p>
-                    <p class="product-condition">Venta</p>
-                </div>
-            </div>
-        </div>
-
-        <hr />
-
-        <div class="advert-list">
-            <div class="advert">
-                <div class="advert-image">
-                    <img src="./assets/img/test.jpg" alt="" />
-                </div>
-                <div class="advert-info">
-                    <h2 class="product-name">Nombre del producto</h2>
-                    <p class="product-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    </p>
-                    <p class="product-price">121,43 €</p>
-                    <p class="product-condition">Venta</p>
-                </div>
-            </div>
-        </div>
+        <!-- ERROR MODAL -->
+        <div class="global-errors"></div>
 
         <!-- MENÚ PROVISIONAL -->
-        <div class="nav-menu">
-            <hr />
+        <nav class="nav-menu">
             <ul>
                 <li>
                     <a href="/index.html">Home</a>
                     <a href="/register.html">Register</a>
                     <a href="/login.html">Login</a>
-                    <a href="/new-advert.html">New advert</a>
-                    <a href="/advert.html">Advert page</a>
+                    <a href="/new-product.html">New product</a>
+                    <a href="/product.html">Product page</a>
                 </li>
             </ul>
-        </div>
+        </nav>
+
+        <header>
+            <h1>Nodepop</h1>
+            <hr />
+        </header>
+
+        <main class="product-list">
+            <!-- Adverts -->
+        </main>
 
         <script type="module" src="js/index.js"></script>
     </body>
