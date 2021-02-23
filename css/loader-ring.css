@@ -18,6 +18,11 @@
     border: 6px solid #fff;
     border-color: lightblue transparent lightblue transparent;
     animation: lds-dual-ring 1.2s linear infinite;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -32px 0 0 -32px;
 }
 @keyframes lds-dual-ring {
     0% {
