@@ -1,5 +1,7 @@
-.advert-info,
-.advert-image {
+@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css';
+
+.product-info,
+.product-image {
     display: inline-block;
 }
 
@@ -11,7 +13,43 @@ img {
     width: 150px;
 }
 
-.nav-menu {
+/* .nav-menu {
     position: fixed;
     bottom: 50px;
+} */
+
+/* .global-errors {
+    position: fixed;
+    width: 100%;
 }
+
+.global-errors.hidden {
+    display: none;
+    width: 80px;
+    height: 80px;
+} */
+/* ERROR MESSAGE */
+/* .global-errors {
+    background-color: rgba(255, 228, 228, 0.9);
+    position: fixed;
+    width: 100%;
+} */
+
+/* .error-header {
+        font-weight: bold;
+        color: #fff;
+        background-color: #ec2d45;
+        padding: 1px 10px;
+        justify-content: space-between;
+    }
+
+    .delete {
+        border-radius: 50px;
+        border: none;
+        height: 25px;
+    }
+
+    .error-message {
+        color: red;
+        padding: 10px;
+    } */
