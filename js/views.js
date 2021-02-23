@@ -19,14 +19,4 @@ export const errorView = (errorMessage) => {
     return `<article class="message is-danger">
                 <div class="message-body">${errorMessage}</div>
             </article>`;
-
-    // return `<div class="error-block">
-    //             <div class="error-header">
-    //                 <p>Error</p>
-    //                 <button class="delete" aria-label="delete">x</button>
-    //             </div>
-    //             <div class="error-message">
-    //                 <p>${errorMessage}</p>
-    //             </div>
-    //         </div>`;
 };

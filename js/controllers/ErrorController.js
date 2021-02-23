@@ -13,11 +13,17 @@ class ErrorController extends BaseController {
     showError(errorMessage) {
         this.element.innerHTML = errorView(errorMessage);
         this.element.classList.remove('hidden');
-        this.element.addEventListener('click', (e) => {
-            if (/* e.target == this.element || */ e.target.classList.contains('delete')) {
-                this.element.classList.add('hidden');
-            }
+        this.element.addEventListener('click', () => {
+            this.hideError();
         });
+
+        setTimeout(() => {
+            this.element.classList.add('hidden');
+        }, 5000);
+    }
+
+    hideError() {
+        this.element.classList.add('hidden');
     }
 }
 
