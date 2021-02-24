@@ -8,16 +8,12 @@ class ProductPageController extends BaseController {
     }
 
     renderProduct(product) {
-        // console.log(product);
+        this.publish(this.events.START_LOADING, {});
         try {
-            if (!product) {
-                // tendré que hacer un if por si no hay producto
-            } else {
-                const article = document.createElement('article');
-                article.classList.add('product');
-                article.innerHTML = productPageView(product);
-                this.element.appendChild(article);
-            }
+            const article = document.createElement('article');
+            article.classList.add('product');
+            article.innerHTML = productPageView(product);
+            this.element.appendChild(article);
         } catch (error) {
             console.error('Ha ocurrido un error', error);
             this.publish(this.events.ERROR, error);

@@ -12,7 +12,6 @@ const DataService = {
 
         if (queryParamsParts.length == 2) {
             url += '/' + productId;
-            console.log('url::', url);
         }
         const response = await fetch(url);
 

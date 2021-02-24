@@ -1,5 +1,5 @@
 import BaseController from './BaseController.js';
-import { errorView } from '../views.js';
+import { errorListView } from '../views.js';
 
 class ErrorController extends BaseController {
     constructor(element) {
@@ -11,7 +11,7 @@ class ErrorController extends BaseController {
     }
 
     showError(errorMessage) {
-        this.element.innerHTML = errorView(errorMessage);
+        this.element.innerHTML = errorListView(errorMessage);
         this.element.classList.remove('hidden');
         this.element.addEventListener('click', () => {
             this.hideError();
