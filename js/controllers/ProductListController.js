@@ -1,7 +1,7 @@
 import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
-import { productView } from '../views.js';
-import { productEmptyListView } from '../views.js';
+import { productListView } from '../views.js';
+import { emptyProductListView } from '../views.js';
 
 class ProductListcontroller extends BaseController {
     constructor(element) {
@@ -12,16 +12,22 @@ class ProductListcontroller extends BaseController {
         this.publish(this.events.START_LOADING, {});
         try {
             if (products.length < 1) {
+                console.log(products);
                 const div = document.createElement('div');
                 div.classList.add('empty-product-list');
-                const text = productEmptyListView();
+                const text = emptyProductListView();
                 div.innerHTML = text;
                 this.element.appendChild(div);
             } else {
-                products.forEach((product) => {
+                products.find((product) => {
                     const article = document.createElement('article');
                     article.classList.add('product');
-                    const productHTML = productView(product);
+
+                    article.addEventListener('click', () => {
+                        window.location.href = 'product.html?id=' + product.id;
+                    });
+
+                    const productHTML = productListView(product);
                     article.innerHTML = productHTML;
                     this.element.appendChild(article);
                 });
@@ -35,18 +41,14 @@ class ProductListcontroller extends BaseController {
     }
 
     async loadProducts() {
-        // this.loader.showLoading();
         this.publish(this.events.START_LOADING, {});
         try {
             const products = await dataService.getProducts();
-            if (products < 1) {
-            }
             this.render(products);
         } catch (error) {
             console.error(error);
             this.publish(this.events.ERROR, error);
         } finally {
-            // this.loader.hideLoading();
             this.publish(this.events.FINISH_LOADING, {});
         }
     }
