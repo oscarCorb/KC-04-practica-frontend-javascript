@@ -21,6 +21,12 @@ select {
     margin-bottom: 1rem;
 }
 
+button {
+    width: 220px;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+}
+
 img {
     width: 150px;
 }
