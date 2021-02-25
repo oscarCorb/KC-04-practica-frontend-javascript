@@ -1,35 +1,31 @@
-import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
+import BaseController from './BaseController.js';
 
-class RegisterFormController extends BaseController {
+class LoginFormController extends BaseController {
     constructor(element) {
         super(element);
         this.attachEventListener();
         this.inputFocus();
     }
 
-    async makePost(user) {
-        await dataService.registerUser(user);
-        // alert('El usuario ha sido creado');
-        window.location.href = '/login.html';
-    }
-
     attachEventListener() {
         this.element.addEventListener('submit', async (event) => {
             event.preventDefault();
             const user = {
-                username: this.element.email.value,
-                password: this.element.password.value,
+                username: this.element.elements.email.value,
+                password: this.element.elements.password.value,
             };
-            // console.log(user);
+
             this.publish(this.events.START_LOADING);
             try {
-                await this.makePost(user);
+                const data = await dataService.loginUser(user);
+                dataService.saveToken(data.accessToken);
             } catch (error) {
                 this.publish(this.events.ERROR, error);
             } finally {
                 this.publish(this.events.FINISH_LOADING);
             }
+            window.location.href = '/index.html';
         });
     }
 
@@ -39,4 +35,4 @@ class RegisterFormController extends BaseController {
     }
 }
 
-export default RegisterFormController;
+export default LoginFormController;

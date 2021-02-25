@@ -20,6 +20,7 @@ const DataService = {
             const data = await response.json();
             return data;
         } else {
+            console.log(error);
             throw new Error(`HTTP Error: ${response.status}`);
         }
     },
@@ -43,7 +44,6 @@ const DataService = {
         }
 
         const token = await this.getToken();
-        console.log('token', token);
         if (token) {
             config.headers['Authorization'] = `Bearer ${token}`;
         }
@@ -58,7 +58,10 @@ const DataService = {
         }
     },
 
-    loginUser: function () {},
+    loginUser: async function (user) {
+        const url = `${BASE_URL}/auth/login`;
+        return await this.post(url, user);
+    },
 
     registerUser: async function (user) {
         const url = `${BASE_URL}/auth/register`;
