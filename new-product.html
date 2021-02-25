@@ -5,55 +5,63 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
-        <title>Create a new advert</title>
+        <link rel="stylesheet" href="css/loader-ring.css" />
+        <link rel="stylesheet" href="css/error.css" />
+        <title>New product | Nodepop</title>
     </head>
     <body>
-        <h1>New advert</h1>
+        <div class="lds-dual-ring hidden"></div>
 
-        <form>
-            <label for="title">Title</label>
-            <input type="text" name="title" />
+        <div class="global-errors hidden"></div>
 
-            <label for="description">Descripción</label>
-            <input type="text" name="description" />
-
-            <label for="price">Precio</label>
-            <input type="number" name="price" />
-
-            <label for="tags">Categorías</label>
-            <!--  este br luego habrá que arreglarlo con css -->
-            <br />
-            <select name="tags" multiple>
-                <option value="cocina">Cocina</option>
-                <option value="bano">Baño</option>
-                <option value="barbacoa">Barbacoa</option>
-                <option value="jardin">Jardín</option>
-            </select>
-
-            <!-- este br luego habrá que arreglarlo con css -->
-            <br />
-            <label for="ad-type">Tipo de anuncio</label>
-            <!-- este br luego habrá que arreglarlo con css -->
-            <br />
-            <select name="ad-type">
-                <!-- <option value="" selected disabled>Elige una opción</option> -->
-                <option value="venta">Venta</option>
-                <option value="oferta">Oferta</option>
-            </select>
-        </form>
-
-        <!-- MENÚ PROVISIONAL -->
         <nav class="nav-menu">
             <ul>
                 <li>
                     <a href="/index.html">Home</a>
+                    <a href="/new-product.html">New product</a>
                     <a href="/register.html">Register</a>
                     <a href="/login.html">Login</a>
-                    <a href="/new-product.html">New product</a>
-                    <a href="/product.html">Product page</a>
                 </li>
             </ul>
         </nav>
-        
+
+        <header>
+            <h2 class="title">Nodepop</h2>
+            <hr />
+            <h1><strong>Crear nuevo producto</strong></h1>
+        </header>
+
+        <main class="form">
+            <form class="new-product-form">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" />
+
+                <label for="price">Precio</label>
+                <input type="number" name="price" />
+
+                <label for="description">Descripción</label>
+                <textarea type="text" name="description"></textarea>
+
+                <label for="tags">Categorías</label>
+
+                <select name="tags" multiple>
+                    <option value="cocina">Cocina</option>
+                    <option value="bano">Baño</option>
+                    <option value="barbacoa">Barbacoa</option>
+                    <option value="jardin">Jardín</option>
+                </select>
+
+                <label for="ad-type">Tipo de anuncio</label>
+                <select name="ad-type">
+                    <!-- <option value="" selected disabled>Elige una opción</option> -->
+                    <option value="venta">Quiero vender un producto</option>
+                    <option value="compra">Estoy buscando un producto</option>
+                </select>
+
+                <button class="button is-success" type="button">Enviar</button>
+            </form>
+        </main>
+
+        <script type="module" src="js/new-product.js"></script>
     </body>
 </html>

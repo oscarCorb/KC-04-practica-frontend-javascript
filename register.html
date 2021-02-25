@@ -7,31 +7,41 @@
         <link rel="stylesheet" href="css/style.css" />
         <title>Register | NodePop</title>
     </head>
+
     <body>
-        <p class="title">Nodepop</p>
-        <hr />
+        <div class="lds-dual-ring hidden"></div>
 
-        <h1>Register</h1>
+        <div class="global-errors hidden"></div>
 
-        <form>
-            <input type="email" name="email" placeholder="Your name here..." />
-            <input type="password" name="password" placeholder="Your password here..." />
-            <button disabled>Register</button>
-        </form>
-
-        <!-- MENÚ PROVISIONAL -->
         <nav class="nav-menu">
             <ul>
                 <li>
                     <a href="/index.html">Home</a>
+                    <a href="/new-product.html">New product</a>
                     <a href="/register.html">Register</a>
                     <a href="/login.html">Login</a>
-                    <a href="/new-product.html">New product</a>
-                    <a href="/product.html">Product page</a>
                 </li>
             </ul>
         </nav>
 
-        <script type="module" src="js/index.js"></script>
+        <header>
+            <h2 class="title">Nodepop</h2>
+            <hr />
+            <h1><strong>Página de registro</strong></h1>
+        </header>
+
+        <main class="form">
+            <form class="register-form">
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" />
+
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" />
+
+                <button class="button is-success">Registrarme</button>
+            </form>
+        </main>
+
+        <script type="module" src="js/register.js"></script>
     </body>
 </html>
