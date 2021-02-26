@@ -44,7 +44,13 @@ class ProductListcontroller extends BaseController {
         this.publish(this.events.START_LOADING, {});
         try {
             const products = await dataService.getProducts();
-            this.render(products);
+
+            let reverseProducts = [];
+            for (let i = products.length - 1; i >= 0; i--) {
+                reverseProducts.push(products[i]);
+            }
+
+            this.render(reverseProducts);
         } catch (error) {
             console.error(error);
             this.publish(this.events.ERROR, error);
