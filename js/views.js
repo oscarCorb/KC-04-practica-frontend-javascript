@@ -1,10 +1,11 @@
 export const productListView = (product) => {
+    const price = product.price.toFixed(2).replace(/[.]/, ',');
     return `<div class="product-image">
                 <img src="./assets/img/products/${product.image}" alt="" />
             </div>
             <div class="product-info">
                 <h2 class="product-name"><strong>${product.name}</strong></h2>
-                <p class="product-price">${product.price.toFixed(2).replace(/[.]/, ',')} €</p>
+                <p class="product-price">${price} €</p>
                 <h3 class="product-description">${product.description}</h3>
                 <p class="product-condition">${product.type ? '"Vendo"' : '"Busco"'}</p>
             </div>
@@ -22,15 +23,14 @@ export const errorListView = (errorMessage) => {
 };
 
 export const productPageView = (product) => {
-    const tag = product.tags.length > 1 ? 'Categorías: ' : 'Categoría: ';
+    const tag = product.tags.length > 1 ? 'Categorías: ' : 'Categoría: ' + product.tags;
+    const price = product.price.toFixed(2).replace(/[.]/, ',');
     return `<h1 class="product-title"><strong>${product.name}</strong></h1>
             <div>
                 <img src="./assets/img/products/${product.image}" alt="${product.description}" />
             </div>
-            <p class="product-price"><strong>${product.price
-                .toFixed(2)
-                .replace(/[.]/, ',')} €</strong></p>
+            <p class="product-price"><strong>${price} €</strong></p>
             <h2 class="product-description">Descripción: ${product.description}</h2>
-            <h3 class="product-tags">${tag + product.tags}</h3>
+            <h3 class="product-tags">${tag}</h3>
             <p class="product-category">Anuncio de ${product.type ? 'venta' : 'compra'}</p>`;
 };

@@ -75,6 +75,23 @@ const DataService = {
     getToken: async function () {
         return localStorage.getItem(TOKEN_KEY);
     },
+
+    userIsLogged: function () {},
+
+    uploadImage: function (image) {},
+
+    getUser: function () {},
+
+    saveProduct: async function (product) {
+        const url = `${BASE_URL}/api/products`;
+        if (product.image) {
+            const imegeUrl = await uploadImage(product.image);
+            product.image = imegeUrl;
+        }
+        return await this.post(url, product);
+    },
+
+    deleteProduct: function () {},
 };
 
 export default DataService;
