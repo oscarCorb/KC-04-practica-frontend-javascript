@@ -3,4 +3,7 @@
     /* bottom: 40px; */
     width: 100%;
     opacity: 0.9;
+
+    /* PROVISIONAL - para que no se solape con browserSync  */
+    margin-top: 15px;
 }

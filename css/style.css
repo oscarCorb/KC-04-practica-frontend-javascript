@@ -47,3 +47,15 @@ form {
 .hidden {
     display: none;
 }
+
+.delete-btn {
+    width: initial;
+    height: 1rem;
+    padding: 12px;
+    margin-top: 5px;
+}
+
+.product {
+    line-height: 2rem;
+    cursor: pointer;
+}
