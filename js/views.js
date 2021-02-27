@@ -7,7 +7,7 @@ export const productListView = (product) => {
                 <h2 class="product-name"><strong>${product.name}</strong></h2>
                 <p class="product-price">${price} €</p>
                 <h3 class="product-description">${product.description}</h3>
-                <p class="product-condition">${product.type ? '"Vendo"' : '"Busco"'}</p>
+                <p class="product-condition">${product.condition ? '"Vendo"' : '"Busco"'}</p>
             </div>
             <hr>`;
 };
@@ -23,14 +23,20 @@ export const errorListView = (errorMessage) => {
 };
 
 export const productPageView = (product) => {
-    const tag = product.tags.length > 1 ? 'Categorías: ' : 'Categoría: ' + product.tags;
+    let deleteButtonHTML = '';
+    if (product.erasable) {
+        deleteButtonHTML = `<button class="button is-danger delete-btn">Eliminar</button>`;
+    }
     const price = product.price.toFixed(2).replace(/[.]/, ',');
+    const tagTitle = product.tags.length > 1 ? 'Categorías: ' : 'Categoría: ';
+    const tags = (tagTitle + product.tags).replace(/,/g, ', ');
     return `<h1 class="product-title"><strong>${product.name}</strong></h1>
             <div>
                 <img src="./assets/img/products/${product.image}" alt="${product.description}" />
             </div>
             <p class="product-price"><strong>${price} €</strong></p>
             <h2 class="product-description">Descripción: ${product.description}</h2>
-            <h3 class="product-tags">${tag}</h3>
-            <p class="product-category">Anuncio de ${product.type ? 'venta' : 'compra'}</p>`;
+            <h3 class="product-tags">${tags}</h3>
+            <p class="product-category">Anuncio de ${product.condition ? 'venta' : 'compra'}</p>
+            ${deleteButtonHTML}`;
 };

@@ -21,7 +21,7 @@ class NewProductController extends BaseController {
                 name: this.element.elements.name.value,
                 description: this.element.elements.description.value,
                 price: this.element.elements.price.value * 1,
-                type: this.element.elements['condition'].value,
+                type: this.element.elements.condition.value,
                 tags: [],
                 // falat gestionar la imagen
                 // image: this.element.elements.image.value,

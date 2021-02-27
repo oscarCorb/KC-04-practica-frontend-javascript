@@ -12,23 +12,23 @@ class ProductListcontroller extends BaseController {
         this.publish(this.events.START_LOADING, {});
         try {
             if (products.length < 1) {
-                console.log(products);
                 const div = document.createElement('div');
                 div.classList.add('empty-product-list');
                 const text = emptyProductListView();
                 div.innerHTML = text;
                 this.element.appendChild(div);
             } else {
-                products.find((product) => {
+                products.forEach((product) => {
                     const article = document.createElement('article');
                     article.classList.add('product');
-
+                    const productHTML = productListView(product);
+                    article.innerHTML = productHTML;
+                    // const name = document.querySelector('.product-name');
+                    // const image = document.querySelector('.product-image');
                     article.addEventListener('click', () => {
                         window.location.href = 'product.html?id=' + product.id;
                     });
 
-                    const productHTML = productListView(product);
-                    article.innerHTML = productHTML;
                     this.element.appendChild(article);
                 });
             }
@@ -43,8 +43,8 @@ class ProductListcontroller extends BaseController {
     async loadProducts() {
         this.publish(this.events.START_LOADING, {});
         try {
+            // const products = await dataService.getProducts();
             const products = await dataService.getProducts();
-
             let reverseProducts = [];
             for (let i = products.length - 1; i >= 0; i--) {
                 reverseProducts.push(products[i]);
