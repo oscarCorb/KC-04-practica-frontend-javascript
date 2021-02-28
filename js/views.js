@@ -1,7 +1,10 @@
 export const productListView = (product) => {
     const price = product.price.toFixed(2).replace(/[.]/, ',');
+    const image = product.image
+        ? `<img src="/assets/img/products/${product.image}" alt="${product.description}"/>`
+        : `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
     return `<div class="product-image">
-                <img src="./assets/img/products/${product.image}" alt="" />
+                ${image}
             </div>
             <div class="product-info">
                 <h2 class="product-name"><strong>${product.name}</strong></h2>
@@ -32,9 +35,12 @@ export const productPageView = (product) => {
     const price = product.price.toFixed(2).replace(/[.]/, ',');
     const tagTitle = product.tags.length > 1 ? 'Categorías: ' : 'Categoría: ';
     const tags = (tagTitle + product.tags).replace(/,/g, ', ');
+    const image = product.image
+        ? `<img src="/assets/img/products/${product.image}" alt="${product.description}"/>`
+        : `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
     return `<h1 class="product-title"><strong>${product.name}</strong></h1>
             <div>
-                <img src="./assets/img/products/${product.image}" alt="${product.description}" />
+                ${image}
             </div>
             <p class="product-price"><strong>${price} €</strong></p>
             <h2 class="product-description">Descripción: ${product.description}</h2>
