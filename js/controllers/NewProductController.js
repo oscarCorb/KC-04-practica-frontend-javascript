@@ -6,6 +6,18 @@ class NewProductController extends BaseController {
         super(element);
         this.attachEventListener();
         this.inputFocus();
+        this.checkIfUserIsLogged();
+    }
+
+    // if user isn't logged in, redirect to log in page
+    async checkIfUserIsLogged() {
+        const userIsLogged = await dataService.isUserLogged();
+
+        console.log(userIsLogged);
+
+        if (!userIsLogged) {
+            window.location.href = './login.html';
+        }
     }
 
     inputFocus() {
