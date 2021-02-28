@@ -11,12 +11,16 @@ class NewProductController extends BaseController {
 
     // if user isn't logged in, redirect to log in page
     async checkIfUserIsLogged() {
-        const userIsLogged = await dataService.isUserLogged();
-
-        console.log(userIsLogged);
-
-        if (!userIsLogged) {
-            window.location.href = './login.html';
+        this.publish(this.events.START_LOADING);
+        try {
+            const userIsLogged = await dataService.isUserLogged();
+            if (!userIsLogged) {
+                window.location.href = './login.html';
+            }
+        } catch (error) {
+            this.publish(this.events.ERROR, error);
+        } finally {
+            this.publish(this.events.FINISH_LOADING);
         }
     }
 
@@ -28,7 +32,6 @@ class NewProductController extends BaseController {
     attachEventListener() {
         this.element.addEventListener('submit', async (event) => {
             event.preventDefault();
-
             const product = {
                 name: this.element.elements.name.value,
                 description: this.element.elements.description.value,
