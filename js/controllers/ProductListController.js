@@ -6,6 +6,7 @@ import { emptyProductListView } from '../views.js';
 class ProductListcontroller extends BaseController {
     constructor(element) {
         super(element);
+        // this.productHover();
         this.checkIfUserIsLogged();
     }
 
@@ -70,6 +71,18 @@ class ProductListcontroller extends BaseController {
             this.publish(this.events.FINISH_LOADING, {});
         }
     }
+
+    // NO FUNCIONA
+    // if hover, change opacity
+    // productHover() {
+    //     const productCard = document.querySelector('.product-info');
+
+    //     console.log('productCard', productCard);
+
+    //     productCard.addEventListener('mouseover', (event) => {
+    //         productCard.classList.add('card-product-hover');
+    //     });
+    // }
 }
 
 export default ProductListcontroller;

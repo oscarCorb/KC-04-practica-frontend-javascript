@@ -13,16 +13,13 @@ class ProductPageController extends BaseController {
             const article = document.createElement('article');
             article.classList.add('product');
             article.innerHTML = productPageView(product);
-            const deleteButton = article.querySelector('button');
+            const deleteButton = article.querySelector('.delete-btn');
             if (deleteButton) {
                 deleteButton.addEventListener('click', async (event) => {
                     const confirmDelete = confirm('¿Seguro que quieres eliminar este producto?');
                     if (confirmDelete) {
                         await dataService.deleteProduct(product);
                         window.location.href = 'index.html';
-                        // NO APARECE EL BOTÓN DE ELIMINAR *** NO PASA POR EL IF de la vista, NO SÉ
-                        // SI ESTÁ BIEN GESTIONADO LO DE DETECTAR EL USUARIO Y QUIZÁ TENGA QUE
-                        // HACER/REVISAR PRIMERO LO DE DETECTAR SI EL USUARIO ESTA AUTENTICADO
                     }
                 });
             }

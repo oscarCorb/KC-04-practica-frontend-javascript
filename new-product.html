@@ -15,12 +15,12 @@
         <div class="global-errors hidden"></div>
 
         <nav class="nav-menu">
-            <ul>
+            <!-- <ul>
                 <li>
                     <a href="/register.html">Register</a>
                     <a href="/login.html">Login</a>
                 </li>
-            </ul>
+            </ul> -->
         </nav>
 
         <header>
@@ -28,10 +28,11 @@
                 <h2 class="title">Nodepop</h2>
             </a>
             <hr />
-            <h1><strong>Crear nuevo producto</strong></h1>
         </header>
 
         <main class="form">
+            <h1 class="subtitle"><strong>Crear nuevo producto</strong></h1>
+
             <form class="new-product-form">
                 <label for="name">Nombre</label>
                 <input type="text" name="name" />
@@ -44,7 +45,7 @@
 
                 <label for="tags">Categorías</label>
 
-                <select name="tags" multiple>
+                <select class="tags" name="tags" multiple>
                     <option value="cocina">Cocina</option>
                     <option value="baño">Baño</option>
                     <option value="barbacoa">Barbacoa</option>
@@ -52,7 +53,7 @@
                 </select>
 
                 <label for="condition">Tipo de anuncio</label>
-                <select name="condition">
+                <select class="condition" name="condition">
                     <!-- <option value="" selected disabled>Elige una opción</option> -->
                     <option value="Venta">Quiero vender este producto</option>
                     <option value="Compra">Estoy buscando este producto</option>

@@ -12,9 +12,10 @@ export const productListView = (product) => {
             <hr>`;
 };
 
-// ** aquí debería poner un link a la página de creación de productos (si usuario autenticado)
 export const emptyProductListView = () => {
-    return `<p>Todavía no hay anuncios. Crea tu primer anuncio.</p>`;
+    return `<p class="no-items-in-product-list">No se han encontrado productos.</p> 
+
+    <p class="no-items-in-product-list"><a href="/new-product.html">Crea tu primer producto >></a></p>`;
 };
 
 export const errorListView = (errorMessage) => {
@@ -39,5 +40,9 @@ export const productPageView = (product) => {
             <h2 class="product-description">Descripción: ${product.description}</h2>
             <h3 class="product-tags">${tags}</h3>
             <p class="product-category">Anuncio de ${product.condition ? 'venta' : 'compra'}</p>
-            ${deleteButtonHTML}`;
+            ${deleteButtonHTML}
+            <a href="/index.html">
+                <button class="button is-info">Volver a la lista</button>
+            </a>
+            `;
 };
