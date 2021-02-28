@@ -17,14 +17,14 @@ const DataService = {
         const data = await response.json();
         // ESTO ES UNA CHAPUZA PERO DEJARLO PARA EL FINAL Y SI SOBRA TIEMPO REINTENTAR ARREGLARLO
         if (response.ok) {
-            console.log(data);
+            // console.log(data);
             // data.name = name.replace(/(<([^>]+)>)/gi, '');
             // data.description = description.replace(/(<([^>]+)>)/gi, '');
             // data.image = image || null;
             // data.author = user.username || 'desconocido';
             data.erasable = currentUser ? currentUser.userId === data.userId : false;
             // data.author = username || 'desconocido';
-            console.log('-data-', data);
+            // console.log('-data-', data);
             return data;
         } else {
             throw new Error(`HTTP Error: ${response.status}`);
@@ -41,7 +41,7 @@ const DataService = {
             // ETSO NO SE VERÁ TAN CHAPUCERO SI ME LO LLEVO A OTRO MÉTODO, COMO HICE ANTES
 
             return data.map((product) => {
-                console.log('product.userId', product.userId);
+                // console.log('product.userId', product.userId);
                 const user = product.user || {};
                 return {
                     name: product.name.replace(/(<([^>]+)>)/gi, ''),

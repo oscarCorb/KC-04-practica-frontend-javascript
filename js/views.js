@@ -12,6 +12,7 @@ export const productListView = (product) => {
             <hr>`;
 };
 
+// ** aquí debería poner un link a la página de creación de productos (si usuario autenticado)
 export const emptyProductListView = () => {
     return `<p>Todavía no hay anuncios. Crea tu primer anuncio.</p>`;
 };
