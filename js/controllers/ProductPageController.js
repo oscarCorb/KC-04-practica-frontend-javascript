@@ -37,7 +37,7 @@ class ProductPageController extends BaseController {
         try {
             const product = await dataService.getProduct();
 
-            console.log('::product:', product);
+            // console.log('::product:', product);
 
             this.renderProduct(product);
         } catch (error) {

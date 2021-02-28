@@ -4,8 +4,16 @@ body {
     padding: 15px;
 }
 
+.nav-menu {
+    position: fixed;
+    right: 20px;
+    z-index: 1;
+    background-color: #fff;
+}
+
 header {
     position: fixed;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -51,14 +59,6 @@ form {
     padding-top: 30px;
 }
 
-.nav-menu {
-    position: fixed;
-    right: 20px;
-    z-index: 1;
-    /* background-color: #fff; */
-    /* ****** */
-}
-
 .title,
 .subtitle {
     text-align: center;
@@ -100,13 +100,6 @@ form {
 .hidden {
     display: none;
 }
-
-/* .delete-btn {
-    width: initial;
-    height: 1rem;
-    padding: 12px;
-    margin-top: 5px;
-} */
 
 .product {
     line-height: 2rem;

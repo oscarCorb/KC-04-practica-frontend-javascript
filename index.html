@@ -14,14 +14,6 @@
 
         <div class="global-errors hidden"></div>
 
-        <nav class="nav-menu">
-            <ul>
-                <li>
-                    <a href="/login.html">Login</a>
-                </li>
-            </ul>
-        </nav>
-
         <header>
             <a href="/index.html">
                 <h2 class="title">Nodepop</h2>
@@ -30,6 +22,15 @@
             <hr />
         </header>
 
+        <nav class="nav-menu">
+            <ul>
+                <li>
+                    <a class="login-btn hidden" href="/login.html">Login</a>
+                    <a class="close-session-btn hidden" href="">Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+
         <main class="product-list"></main>
 
         <a href="/new-product.html" class="create-product-btn hidden">
@@ -37,5 +38,6 @@
         </a>
 
         <script type="module" src="js/index.js"></script>
+        <script type="module" src="js/account-menu.js"></script>
     </body>
 </html>

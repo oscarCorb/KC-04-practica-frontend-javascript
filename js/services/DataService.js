@@ -115,6 +115,10 @@ const DataService = {
         localStorage.setItem(TOKEN_KEY, token);
     },
 
+    deleteToken: async function () {
+        localStorage.clear();
+    },
+
     getToken: async function () {
         return localStorage.getItem(TOKEN_KEY);
     },

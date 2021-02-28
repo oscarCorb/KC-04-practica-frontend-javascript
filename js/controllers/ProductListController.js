@@ -1,4 +1,5 @@
 import BaseController from './BaseController.js';
+// import MyAccountMenuController from './MyAccountMenuController.js';
 import dataService from '../services/DataService.js';
 import { productListView } from '../views.js';
 import { emptyProductListView } from '../views.js';
@@ -6,18 +7,6 @@ import { emptyProductListView } from '../views.js';
 class ProductListcontroller extends BaseController {
     constructor(element) {
         super(element);
-        // this.productHover();
-        this.checkIfUserIsLogged();
-    }
-
-    // if user is logged in, display "crete product" button
-    async checkIfUserIsLogged() {
-        const createProductBtn = document.querySelector('.create-product-btn');
-        const userIsLogged = await dataService.isUserLogged();
-        if (userIsLogged) {
-            console.log(userIsLogged);
-            createProductBtn.classList.remove('hidden');
-        }
     }
 
     render(products) {
@@ -71,18 +60,6 @@ class ProductListcontroller extends BaseController {
             this.publish(this.events.FINISH_LOADING, {});
         }
     }
-
-    // NO FUNCIONA
-    // if hover, change opacity
-    // productHover() {
-    //     const productCard = document.querySelector('.product-info');
-
-    //     console.log('productCard', productCard);
-
-    //     productCard.addEventListener('mouseover', (event) => {
-    //         productCard.classList.add('card-product-hover');
-    //     });
-    // }
 }
 
 export default ProductListcontroller;
