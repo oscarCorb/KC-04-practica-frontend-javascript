@@ -35,7 +35,7 @@
 
             <form class="new-product-form">
                 <label for="name">Nombre</label>
-                <input type="text" name="name" />
+                <input type="text" name="name" required />
 
                 <label for="price">Precio</label>
                 <input type="number" name="price" />
@@ -45,7 +45,7 @@
 
                 <label for="tags">Categorías</label>
 
-                <select class="tags" name="tags" multiple>
+                <select class="tags" name="tags" multiple required>
                     <option value="cocina">Cocina</option>
                     <option value="baño">Baño</option>
                     <option value="barbacoa">Barbacoa</option>
@@ -53,8 +53,8 @@
                 </select>
 
                 <label for="condition">Tipo de anuncio</label>
-                <select class="condition" name="condition">
-                    <!-- <option value="" selected disabled>Elige una opción</option> -->
+                <select class="condition" name="condition" required>
+                    <option value="" selected disabled>Elige una opción</option>
                     <option value="Venta">Quiero vender este producto</option>
                     <option value="Compra">Estoy buscando este producto</option>
                 </select>
