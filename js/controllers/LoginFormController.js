@@ -20,12 +20,13 @@ class LoginFormController extends BaseController {
             try {
                 const data = await dataService.loginUser(user);
                 dataService.saveToken(data.accessToken);
+                window.location.href = '/index.html';
             } catch (error) {
+                console.log(error);
                 this.publish(this.events.ERROR, error);
             } finally {
                 this.publish(this.events.FINISH_LOADING);
             }
-            window.location.href = '/index.html';
         });
     }
 
