@@ -1,5 +1,4 @@
 import BaseController from './BaseController.js';
-// import MyAccountMenuController from './MyAccountMenuController.js';
 import dataService from '../services/DataService.js';
 import { productListView } from '../views.js';
 import { emptyProductListView } from '../views.js';
@@ -12,7 +11,7 @@ class ProductListcontroller extends BaseController {
     render(products) {
         this.publish(this.events.START_LOADING, {});
         try {
-            // if no products, render "no products" view
+            // if no products, it renders "no products" view
             if (products.length < 1) {
                 const div = document.createElement('div');
                 div.classList.add('empty-product-list');
@@ -20,14 +19,12 @@ class ProductListcontroller extends BaseController {
                 div.innerHTML = text;
                 this.element.appendChild(div);
             } else {
-                // render product list in home page
+                // it renders product list in home page
                 products.forEach((product) => {
                     const article = document.createElement('article');
                     article.classList.add('product');
                     const productHTML = productListView(product);
                     article.innerHTML = productHTML;
-                    // const name = document.querySelector('.product-name');
-                    // const image = document.querySelector('.product-image');
                     article.addEventListener('click', () => {
                         window.location.href = 'product.html?id=' + product.id;
                     });
@@ -45,9 +42,9 @@ class ProductListcontroller extends BaseController {
     async loadProducts() {
         this.publish(this.events.START_LOADING, {});
         try {
-            // get product list from DataService
+            // it gets product list from DataService
             const products = await dataService.getProducts();
-            // display new products first
+            // it reverses list to display new products first
             let reverseProducts = [];
             for (let i = products.length - 1; i >= 0; i--) {
                 reverseProducts.push(products[i]);

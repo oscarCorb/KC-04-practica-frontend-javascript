@@ -10,7 +10,7 @@ class RegisterFormController extends BaseController {
 
     async makePost(user) {
         await dataService.registerUser(user);
-        // alert('El usuario ha sido creado');
+        alert('El usuario ha sido creado');
         window.location.href = '/login.html';
     }
 
@@ -21,7 +21,6 @@ class RegisterFormController extends BaseController {
                 username: this.element.email.value,
                 password: this.element.password.value,
             };
-            // console.log(user);
             this.publish(this.events.START_LOADING);
             try {
                 await this.makePost(user);

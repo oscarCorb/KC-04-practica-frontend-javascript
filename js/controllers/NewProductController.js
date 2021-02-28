@@ -9,7 +9,7 @@ class NewProductController extends BaseController {
         this.checkIfUserIsLogged();
     }
 
-    // if user isn't logged in, redirect to log in page
+    // if user isn't logged in, it redirects to log in page
     async checkIfUserIsLogged() {
         this.publish(this.events.START_LOADING);
         try {
@@ -38,8 +38,6 @@ class NewProductController extends BaseController {
                 price: this.element.elements.price.value * 1,
                 type: this.element.elements.condition.value,
                 tags: [],
-                // falat gestionar la imagen
-                // image: this.element.elements.image.value,
             };
 
             let selectedTags = [];

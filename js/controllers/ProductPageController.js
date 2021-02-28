@@ -36,9 +36,6 @@ class ProductPageController extends BaseController {
         this.publish(this.events.START_LOADING, {});
         try {
             const product = await dataService.getProduct();
-
-            // console.log('::product:', product);
-
             this.renderProduct(product);
         } catch (error) {
             this.publish(this.events.ERROR, error);

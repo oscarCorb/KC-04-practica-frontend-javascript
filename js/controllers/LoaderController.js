@@ -3,7 +3,6 @@ import BaseController from './BaseController.js';
 class LoaderController extends BaseController {
     constructor(element) {
         super(element);
-        // en cuando se instancie esta clase, se activa la escucha del 'subscribe'
         this.subscribe(this.events.START_LOADING, () => {
             this.showLoading();
         });

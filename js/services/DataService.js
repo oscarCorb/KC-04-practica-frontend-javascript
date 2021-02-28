@@ -1,8 +1,6 @@
 const BASE_URL = 'http://127.0.0.1:8000';
 const TOKEN_KEY = 'token';
 
-// OJO: En sevices no usar arrow functions al definir los métodos
-
 const DataService = {
     getProduct: async function () {
         let url;
@@ -15,16 +13,8 @@ const DataService = {
         }
         const response = await fetch(url);
         const data = await response.json();
-        // ESTO ES UNA CHAPUZA PERO DEJARLO PARA EL FINAL Y SI SOBRA TIEMPO REINTENTAR ARREGLARLO
         if (response.ok) {
-            // console.log(data);
-            // data.name = name.replace(/(<([^>]+)>)/gi, '');
-            // data.description = description.replace(/(<([^>]+)>)/gi, '');
-            // data.image = image || null;
-            // data.author = user.username || 'desconocido';
             data.erasable = currentUser ? currentUser.userId === data.userId : false;
-            // data.author = username || 'desconocido';
-            // console.log('-data-', data);
             return data;
         } else {
             throw new Error(`HTTP Error: ${response.status}`);
@@ -38,10 +28,7 @@ const DataService = {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            // ETSO NO SE VERÁ TAN CHAPUCERO SI ME LO LLEVO A OTRO MÉTODO, COMO HICE ANTES
-
             return data.map((product) => {
-                // console.log('product.userId', product.userId);
                 const user = product.user || {};
                 return {
                     name: product.name.replace(/(<([^>]+)>)/gi, ''),
