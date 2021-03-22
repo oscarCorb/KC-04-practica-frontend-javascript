@@ -15,6 +15,8 @@ const DataService = {
         const data = await response.json();
         if (response.ok) {
             data.erasable = currentUser ? currentUser.userId === data.userId : false;
+            data.name = data.name.replace(/(<([^>]+)>)/gi, '');
+            data.description = data.description.replace(/(<([^>]+)>)/gi, '');
             return data;
         } else {
             throw new Error(`HTTP Error: ${response.status}`);
@@ -39,7 +41,9 @@ const DataService = {
                     image: product.image || null,
                     id: product.id,
                     author: user.username || 'desconocido',
-                    erasable: currentUser ? currentUser.userId === product.userId : false,
+                    erasable: currentUser
+                        ? currentUser.userId === product.userId
+                        : false,
                 };
             });
         } else {
