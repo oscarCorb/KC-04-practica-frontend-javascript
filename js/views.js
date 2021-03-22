@@ -1,8 +1,15 @@
 export const productListView = (product) => {
     const price = product.price.toFixed(2).replace(/[.]/, ',');
-    const image = product.image
-        ? `<img src="/assets/img/products/${product.image}" alt="${product.description}"/>`
-        : `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
+
+    let image = `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
+
+    if (product.description.match(/##test-product##/)) {
+        // just for testing products
+        image = `<img src="/assets/img/products/${product.image}" alt="${product.description}"/>`;
+    } else if (product.image) {
+        image = `<img src="${product.image}" alt="${product.description}"/>`;
+    }
+
     return `<div class="product-image">
                 ${image}
             </div>
@@ -10,7 +17,9 @@ export const productListView = (product) => {
                 <h2 class="product-name"><strong>${product.name}</strong></h2>
                 <p class="product-price">${price} €</p>
                 <h3 class="product-description">${product.description}</h3>
-                <p class="product-condition">${product.condition ? '"Vendo"' : '"Busco"'}</p>
+                <p class="product-condition">${
+                    product.condition ? '"Vendo"' : '"Busco"'
+                }</p>
             </div>
             <hr>`;
 };
@@ -35,17 +44,28 @@ export const productPageView = (product) => {
     const price = product.price.toFixed(2).replace(/[.]/, ',');
     const tagTitle = product.tags.length > 1 ? 'Categorías: ' : 'Categoría: ';
     const tags = (tagTitle + product.tags).replace(/,/g, ', ');
-    const image = product.image
-        ? `<img src="/assets/img/products/${product.image}" alt="${product.description}"/>`
-        : `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
+
+    // const image = product.image
+    //     ? `<img src="${product.image}" alt="${product.description}"/>`
+    //     : `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
+
+    let image = `<img src="/assets/img/products/default.jpg" alt="${product.description}"/>`;
+
+    if (product.description.match(/##test-product##/)) {
+        // just for testing products
+        image = `<img src="/assets/img/products/${product.image}" alt="${product.description}"/>`;
+    } else if (product.image) {
+        image = `<img src="${product.image}" alt="${product.description}"/>`;
+    }
+
     return `<h1 class="product-title"><strong>${product.name}</strong></h1>
-            <div>
-                ${image}
-            </div>
+            ${image}
             <p class="product-price"><strong>${price} €</strong></p>
             <h2 class="product-description">Descripción: ${product.description}</h2>
             <h3 class="product-tags">${tags}</h3>
-            <p class="product-category">Anuncio de ${product.condition ? 'venta' : 'compra'}</p>
+            <p class="product-category">Anuncio de ${
+                product.condition ? 'venta' : 'compra'
+            }</p>
             ${deleteButtonHTML}
             <a href="/index.html">
                 <button class="button is-info">Volver a la lista</button>

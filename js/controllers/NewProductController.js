@@ -38,7 +38,12 @@ class NewProductController extends BaseController {
                 price: this.element.elements.price.value * 1,
                 type: this.element.elements.condition.value,
                 tags: [],
+                image: null,
             };
+
+            if (this.element.elements.file.files.length > 0) {
+                product.image = this.element.elements.file.files[0];
+            }
 
             let selectedTags = [];
             for (const tag of this.element.tags.selectedOptions) {

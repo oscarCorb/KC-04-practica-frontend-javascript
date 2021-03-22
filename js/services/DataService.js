@@ -17,6 +17,7 @@ const DataService = {
             data.erasable = currentUser ? currentUser.userId === data.userId : false;
             data.name = data.name.replace(/(<([^>]+)>)/gi, '');
             data.description = data.description.replace(/(<([^>]+)>)/gi, '');
+            data.image = data.image || null;
             return data;
         } else {
             throw new Error(`HTTP Error: ${response.status}`);
@@ -119,7 +120,7 @@ const DataService = {
         return token !== null; // return true or false
     },
 
-    uploadImage: function (image) {},
+    // uploadImage: async function (image) {
 
     getUser: async function () {
         try {
@@ -137,10 +138,18 @@ const DataService = {
         }
     },
 
+    uploadImage: async function (image) {
+        const form = new FormData();
+        form.append('file', image);
+        const url = `${BASE_URL}/upload`;
+        const response = await this.post(url, form, false);
+        return response.path || null;
+    },
+
     saveProduct: async function (product) {
         const url = `${BASE_URL}/api/products`;
         if (product.image) {
-            const imageUrl = await uploadImage(product.image);
+            const imageUrl = await this.uploadImage(product.image);
             product.image = imageUrl;
         }
         return await this.post(url, product);
