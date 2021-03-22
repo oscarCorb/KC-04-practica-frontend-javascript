@@ -1,276 +1,266 @@
 {
-  "products": [
-    {
-      "id": 1,
-      "name": "Lavabo",
-      "description": "Lavabo de porcelana blanco",
-      "price": 95.34,
-      "condition": true,
-      "tags": [
-        "baño"
-      ],
-      "image": "lavabo.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Fregadero",
-      "price": 545.34,
-      "condition": false,
-      "tags": [
-        "cocina"
-      ],
-      "description": "Fregadero de acero inoxidable",
-      "image": "fregadero.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Pinzas",
-      "description": "Pinzas largas para barbacoa",
-      "price": 32.99,
-      "condition": true,
-      "tags": [
-        "barbacoa"
-      ],
-      "image": "pinzas.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Manguera",
-      "description": "Manguera de 8 metros",
-      "price": 25,
-      "condition": true,
-      "tags": [
-        "jardín"
-      ],
-      "image": "manguera.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Grifo",
-      "description": "Grifo cromado con caño en cascada",
-      "price": 231.9,
-      "condition": false,
-      "tags": [
-        "cocina",
-        "baño",
-        "jardín"
-      ],
-      "image": "grifo.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Delantal",
-      "description": "Delantal con estampado de Aphex Twin",
-      "price": 20,
-      "condition": false,
-      "tags": [
-        "cocina",
-        "barbacoa"
-      ],
-      "image": "delantal.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Perchero",
-      "description": "Perchero multiple para puerta",
-      "price": 20,
-      "condition": true,
-      "tags": [
-        "cocina",
-        "baño"
-      ],
-      "image": "perchero.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Albornoz",
-      "description": "Albornoz de rayas multicolor",
-      "price": 35.1,
-      "condition": false,
-      "tags": [
-        "baño"
-      ],
-      "image": "albornoz.jpg"
-    },
-    {
-      "id": 9,
-      "name": "Salero",
-      "description": "Salero de cristal",
-      "price": 10,
-      "condition": true,
-      "tags": [
-        "cocina",
-        "barbacoa"
-      ],
-      "image": "salero.jpg"
-    },
-    {
-      "id": 10,
-      "name": "Cascanueces",
-      "description": "Cascanueces de titanio",
-      "price": 105.7,
-      "condition": true,
-      "tags": [
-        "cocina"
-      ],
-      "image": "cascanueces.jpg"
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "username": "test",
-      "password": "xxxxxxxxdfdñnlfjkdskljdnsñlfkjasdnkl"
-    },
-    {
-      "id": 2,
-      "username": "yeah@gmail.com",
-      "password": "$2b$10$wEqQy8vD9kauxfuTQSX6jOTCXmC.qz8QbbVrpWp86j9RkQT8ltSp."
-    },
-    {
-      "username": "sami",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 3
-    },
-    {
-      "username": "sami2",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 4
-    },
-    {
-      "username": "sami3",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 5
-    },
-    {
-      "username": "sami4",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 6
-    },
-    {
-      "username": "sami5",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 7
-    },
-    {
-      "username": "asdf@sadfasd",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuGJezDaUdJc008l/yj/xdnwiUtq.DrL2",
-      "id": 8
-    },
-    {
-      "username": "asdf@sadfasd",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuGJezDaUdJc008l/yj/xdnwiUtq.DrL2",
-      "id": 9
-    },
-    {
-      "username": "2@2",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuP8SxuU3Ttk34ZdqOe6o57FJyfQWOv5W",
-      "id": 10
-    },
-    {
-      "username": "2@2",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuP8SxuU3Ttk34ZdqOe6o57FJyfQWOv5W",
-      "id": 11
-    },
-    {
-      "username": "12@12",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveufvAyLsGKB87LG.F5yN17gEG4X0MVr.e",
-      "id": 12
-    },
-    {
-      "username": "12@12",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveufvAyLsGKB87LG.F5yN17gEG4X0MVr.e",
-      "id": 13
-    },
-    {
-      "username": "11@11",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveudOtoCNVf2qHqdFLogS2Fu7/7Ssw37dC",
-      "id": 14
-    },
-    {
-      "username": "11@11",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveudOtoCNVf2qHqdFLogS2Fu7/7Ssw37dC",
-      "id": 15
-    },
-    {
-      "username": "manolo@manolo",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuz12a/k8qoyVc81Y08l2c.oWstCNiBX.",
-      "id": 16
-    },
-    {
-      "username": "manolo@manolo",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuz12a/k8qoyVc81Y08l2c.oWstCNiBX.",
-      "id": 17
-    },
-    {
-      "username": "sami6",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 18
-    },
-    {
-      "username": "hola@hola",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuLi.oBijCb76ze4lAGwUH8HRuX5d0R/G",
-      "id": 19
-    },
-    {
-      "username": "4@4",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuXQG0y57BDwnkeHW9WspYf3N2ojnYc1q",
-      "id": 20
-    },
-    {
-      "username": "4@4",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuXQG0y57BDwnkeHW9WspYf3N2ojnYc1q",
-      "id": 21
-    },
-    {
-      "username": "p@p",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuw7WIzGWhAahpg9m959nKSlYNi1yllRW",
-      "id": 22
-    },
-    {
-      "username": "p@p",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuw7WIzGWhAahpg9m959nKSlYNi1yllRW",
-      "id": 23
-    },
-    {
-      "username": "q@q",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuAE2WJawtttIGp0jcxeL8RG2Y.rVZpy2",
-      "id": 24
-    },
-    {
-      "username": "q@q",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuAE2WJawtttIGp0jcxeL8RG2Y.rVZpy2",
-      "id": 25
-    },
-    {
-      "username": "111@111",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveucPduFYbGt8nzAbE.VSIRge.7tXQXObq",
-      "id": 26
-    },
-    {
-      "username": "ds@s",
-      "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
-      "id": 27
-    },
-    {
-      "username": "oscar@test",
-      "password": "$2b$10$FiDZS1YEkcpKZFUxNBekkeyuzuVrdGMa0hmF514ebji872ypMs8gC",
-      "id": 28
-    },
-    {
-      "username": "oscar@test",
-      "password": "$2b$10$FiDZS1YEkcpKZFUxNBekkeyuzuVrdGMa0hmF514ebji872ypMs8gC",
-      "id": 29
-    },
-    {
-      "username": "x@x",
-      "password": "$2b$10$QcRdskCJil3EcVeW25YH0eHjJPFlC2AQ4kJfhkfNDwChY0BP0R/RK",
-      "id": 30
-    },
-    {
-      "username": "1@1",
-      "password": "$2b$10$p4y4QqNn8wfjg4eRM//ERuHXYOCR6.SXs7wwjniMcFuoB3DRVnq6S",
-      "id": 31
-    }
-  ]
+    "products": [
+        {
+            "id": 1,
+            "name": "Lavabo",
+            "description": "Lavabo de porcelana blanco ##test-product##",
+            "price": 95.34,
+            "condition": true,
+            "tags": ["baño"],
+            "image": "lavabo.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Fregadero",
+            "price": 545.34,
+            "condition": false,
+            "tags": ["cocina"],
+            "description": "Fregadero de acero inoxidable ##test-product##",
+            "image": "fregadero.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Pinzas",
+            "description": "Pinzas largas para barbacoa ##test-product##",
+            "price": 32.99,
+            "condition": true,
+            "tags": ["barbacoa"],
+            "image": "pinzas.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Manguera",
+            "description": "Manguera de 8 metros ##test-product##",
+            "price": 25,
+            "condition": true,
+            "tags": ["jardín"],
+            "image": "manguera.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Grifo",
+            "description": "Grifo cromado con caño en cascada ##test-product##",
+            "price": 231.9,
+            "condition": false,
+            "tags": ["cocina", "baño", "jardín"],
+            "image": "grifo.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Delantal",
+            "description": "Delantal con estampado de Aphex Twin ##test-product##",
+            "price": 20,
+            "condition": false,
+            "tags": ["cocina", "barbacoa"],
+            "image": "delantal.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Perchero",
+            "description": "Perchero multiple para puerta ##test-product##",
+            "price": 20,
+            "condition": true,
+            "tags": ["cocina", "baño"],
+            "image": "perchero.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Albornoz",
+            "description": "Albornoz de rayas multicolor ##test-product##",
+            "price": 35.1,
+            "condition": false,
+            "tags": ["baño"],
+            "image": "albornoz.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Salero",
+            "description": "Salero de cristal ##test-product##",
+            "price": 10,
+            "condition": true,
+            "tags": ["cocina", "barbacoa"],
+            "image": "salero.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Cascanueces",
+            "description": "Cascanueces de titanio ##test-product##",
+            "price": 105.7,
+            "condition": true,
+            "tags": ["cocina"],
+            "image": "cascanueces.jpg"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "username": "test",
+            "password": "xxxxxxxxdfdñnlfjkdskljdnsñlfkjasdnkl"
+        },
+        {
+            "id": 2,
+            "username": "yeah@gmail.com",
+            "password": "$2b$10$wEqQy8vD9kauxfuTQSX6jOTCXmC.qz8QbbVrpWp86j9RkQT8ltSp."
+        },
+        {
+            "username": "sami",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 3
+        },
+        {
+            "username": "sami2",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 4
+        },
+        {
+            "username": "sami3",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 5
+        },
+        {
+            "username": "sami4",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 6
+        },
+        {
+            "username": "sami5",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 7
+        },
+        {
+            "username": "asdf@sadfasd",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuGJezDaUdJc008l/yj/xdnwiUtq.DrL2",
+            "id": 8
+        },
+        {
+            "username": "asdf@sadfasd",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuGJezDaUdJc008l/yj/xdnwiUtq.DrL2",
+            "id": 9
+        },
+        {
+            "username": "2@2",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuP8SxuU3Ttk34ZdqOe6o57FJyfQWOv5W",
+            "id": 10
+        },
+        {
+            "username": "2@2",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuP8SxuU3Ttk34ZdqOe6o57FJyfQWOv5W",
+            "id": 11
+        },
+        {
+            "username": "12@12",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveufvAyLsGKB87LG.F5yN17gEG4X0MVr.e",
+            "id": 12
+        },
+        {
+            "username": "12@12",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveufvAyLsGKB87LG.F5yN17gEG4X0MVr.e",
+            "id": 13
+        },
+        {
+            "username": "11@11",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveudOtoCNVf2qHqdFLogS2Fu7/7Ssw37dC",
+            "id": 14
+        },
+        {
+            "username": "11@11",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveudOtoCNVf2qHqdFLogS2Fu7/7Ssw37dC",
+            "id": 15
+        },
+        {
+            "username": "manolo@manolo",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuz12a/k8qoyVc81Y08l2c.oWstCNiBX.",
+            "id": 16
+        },
+        {
+            "username": "manolo@manolo",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuz12a/k8qoyVc81Y08l2c.oWstCNiBX.",
+            "id": 17
+        },
+        {
+            "username": "sami6",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 18
+        },
+        {
+            "username": "hola@hola",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuLi.oBijCb76ze4lAGwUH8HRuX5d0R/G",
+            "id": 19
+        },
+        {
+            "username": "4@4",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuXQG0y57BDwnkeHW9WspYf3N2ojnYc1q",
+            "id": 20
+        },
+        {
+            "username": "4@4",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuXQG0y57BDwnkeHW9WspYf3N2ojnYc1q",
+            "id": 21
+        },
+        {
+            "username": "p@p",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuw7WIzGWhAahpg9m959nKSlYNi1yllRW",
+            "id": 22
+        },
+        {
+            "username": "p@p",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuw7WIzGWhAahpg9m959nKSlYNi1yllRW",
+            "id": 23
+        },
+        {
+            "username": "q@q",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuAE2WJawtttIGp0jcxeL8RG2Y.rVZpy2",
+            "id": 24
+        },
+        {
+            "username": "q@q",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuAE2WJawtttIGp0jcxeL8RG2Y.rVZpy2",
+            "id": 25
+        },
+        {
+            "username": "111@111",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveucPduFYbGt8nzAbE.VSIRge.7tXQXObq",
+            "id": 26
+        },
+        {
+            "username": "ds@s",
+            "password": "$2b$10$swXOovCcW89i4L/ncJXveuPHPpGGNKA8LAdqD9xlTGtpvjNKV8Ugi",
+            "id": 27
+        },
+        {
+            "username": "oscar@test",
+            "password": "$2b$10$FiDZS1YEkcpKZFUxNBekkeyuzuVrdGMa0hmF514ebji872ypMs8gC",
+            "id": 28
+        },
+        {
+            "username": "oscar@test",
+            "password": "$2b$10$FiDZS1YEkcpKZFUxNBekkeyuzuVrdGMa0hmF514ebji872ypMs8gC",
+            "id": 29
+        },
+        {
+            "username": "x@x",
+            "password": "$2b$10$QcRdskCJil3EcVeW25YH0eHjJPFlC2AQ4kJfhkfNDwChY0BP0R/RK",
+            "id": 30
+        },
+        {
+            "username": "1@1",
+            "password": "$2b$10$p4y4QqNn8wfjg4eRM//ERuHXYOCR6.SXs7wwjniMcFuoB3DRVnq6S",
+            "id": 31
+        },
+        {
+            "username": "sda@asd",
+            "password": "$2b$10$p4y4QqNn8wfjg4eRM//ERujJ8alrYAX6dZDC8wDUKkjII4rhIdBYq",
+            "id": 32
+        },
+        {
+            "username": "dsa@w",
+            "password": "$2b$10$p4y4QqNn8wfjg4eRM//ERup7tXs0Nne.TTvImn5fofgrWZgMgQN0O",
+            "id": 33
+        },
+        {
+            "username": "33@33",
+            "password": "$2b$10$p4y4QqNn8wfjg4eRM//ERuU.o313KJXomu9JOhoSlR8sCNMyuBxcu",
+            "id": 34
+        }
+    ]
 }
